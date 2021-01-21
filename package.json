@@ -1,0 +1,8 @@
+{
+  "name": "react-guidesmiths",
+
+  "scripts": {
+    "dev:server": "node ./server/app.js",
+    "dev:client": "npm start --prefix ./client"
+  }
+}
