@@ -24,15 +24,6 @@ export default function AboutPage() {
         </p>
       </div>
       <div>- Containerized with docker and hosted on AWS EC2</div>
-      <br />
-      <br />
-      <p>
-        If you run out of data because you deleted all of it, you can make a request to{' '}
-        <a target="_blank" href="/api/phones/loadMock">
-          domain.com/api/phones/loadMock
-        </a>{' '}
-        to generate some.
-      </p>
     </div>
   );
 }

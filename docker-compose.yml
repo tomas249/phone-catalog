@@ -6,18 +6,20 @@ services:
       context: ./client
       dockerfile: Dockerfile
     ports:
-      - 8000:8000
+      - 8000:80
+    depends_on:
+      - server
   server:
     container_name: phone_catalog_server
     build:
       context: ./server
       dockerfile: Dockerfile
     ports:
-      - '3005:5000'
-    external_links:
+      - '5000:5000'
+    depends_on:
       - mongo
   mongo:
-    container_name: phone_catalog_mongo
+    container_name: phone_catalog_db
     image: mongo
     ports:
-      - '27017:27017'
+      - '27018:27017'
