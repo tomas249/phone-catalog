@@ -1,0 +1,40 @@
+.filter-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.filter-text-sep {
+  color: darkgray;
+  padding: 0 1rem;
+  margin: 0;
+}
+
+.filter-inputField {
+  font-size: 1rem;
+  border: none;
+  border-bottom: 1px solid lightskyblue;
+  padding: 5px 10px;
+  outline: none;
+}
+
+[placeholder]:focus::-webkit-input-placeholder {
+  text-indent: -100%;
+  opacity: 2220;
+}
+
+.filter-add-btn {
+  padding: 6px 10px;
+  background: transparent;
+  border: 2px solid lightskyblue;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1;
+  outline: 0;
+}
+
+.filter-add-btn:hover {
+  background-color: lightskyblue;
+  color: white;
+}
