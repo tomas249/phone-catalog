@@ -1,0 +1,23 @@
+version: '3'
+services:
+  client:
+    container_name: phone_catalog_client
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    ports:
+      - 8000:8000
+  server:
+    container_name: phone_catalog_server
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    ports:
+      - '3005:5000'
+    external_links:
+      - mongo
+  mongo:
+    container_name: phone_catalog_mongo
+    image: mongo
+    ports:
+      - '27017:27017'
