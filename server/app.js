@@ -3,13 +3,7 @@ const dotenv = require('dotenv');
 const path = require('path');
 const cors = require('cors');
 const connectDB = require('./config/db');
-const fs = require('fs')
-console.log('HELLO')
-fs.readdir(path.join(__dirname, '..', 'app'), (err, files) => {
-  files.forEach(file => {
-    console.log(file);
-  });
-});
+
 // Load env vars
 dotenv.config({ path: path.join(__dirname, 'config', 'config.env') });
 
